@@ -71,8 +71,10 @@ export const initializeClient = () => {
             if (!lead) {
                 console.log(`El sender ${sender} no esta registrado.`);
                 let welcomeMessage = await createWelcomeMessage(sender);
-                await createLead(sender);
-                await sendMessageUnofficial(sender, welcomeMessage);
+                let newLead = await createLead(sender);
+                if (newLead) {
+                    await sendMessageUnofficial(sender, welcomeMessage);
+                }
                 return;
             }
 
