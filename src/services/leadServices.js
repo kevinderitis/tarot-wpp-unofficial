@@ -131,7 +131,7 @@ export const saveLeadPayment = async (chatId) => {
 export const createWelcomeMessage = async chatId => {
     try {
         let preference = await createPaymentPreference(chatId);
-        let welcomeMessage = `¡Perfecto! Para proceder con el pago y realizar la tirada de cartas de tarot, hacelo a través del siguiente link de pago seguro: ${preference}. Una vez realizada la transacción, avísame para verificar la confirmación del pago y así proceder con la tirada de cartas de tarot. Estoy aquí para brindarte orientación y claridad en este momento.`;
+        let welcomeMessage = `Para proceder con el pago y revelar lo que el tarot tiene para vos, hacelo a través del siguiente link de pago seguro: ${preference}. Una vez realizada la transacción, avisame para verificar la confirmación del pago y así proceder con la tirada de cartas de tarot. Estoy aquí para brindarte orientación y claridad en este momento.`;
         return welcomeMessage;
     } catch (error) {
         console.log(error);
@@ -143,7 +143,7 @@ export const createWelcomeMessage = async chatId => {
 export const createPaymentMessage = async chatId => {
     try {
         let preference = await createPaymentPreference(chatId);
-        let welcomeMessage = `Hola de nuevo! para acceder a una nueva tirada de cartas te dejo el link de pago seguro: ${preference}. Cuando se acredite el pago comenzaremos con la nueva tirada.`;
+        let welcomeMessage = `Hola! para acceder a otra tirada de cartas te dejo el link de pago seguro: ${preference}. Cuando se acredite el pago comenzaremos con la nueva tirada.`;
         return welcomeMessage;
     } catch (error) {
         console.log(error);
