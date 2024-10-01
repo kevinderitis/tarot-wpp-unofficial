@@ -21,7 +21,7 @@ app.use('/mp', mpRouter);
 initializeClient();
 
 const server = app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+    console.log(`Server listening on port ${port}.`);
 });
 
 server.on('error', error => console.log(error));
